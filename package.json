@@ -1,0 +1,38 @@
+{
+  "name": "falcor-server",
+  "version": "0.1.0",
+  "description": "juno falcor router server implementation",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "tslint src/**/*.ts",
+    "clean": "rm -r dist/",
+    "build:tests": "tsc --project tsconfig-test.json",
+    "test": "npm run build:tests && NODE_ENV=test node dist_test/test/ | tap-summary",
+    "dev": "tsc-watch --onSuccess \"node dist/index.js\"",
+    "validate": "npm run lint && npm run test",
+    "build": "npm run clean && tsc"
+  },
+  "author": "James Conkling <james.lane.conkling@gmail.com> jameslaneconkling.github.io",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "falcor-express": "^0.1.4",
+    "juno-falcor-router": "github:junonetwork/juno-falcor-router#master",
+    "ramda": "^0.26.1",
+    "sparqljs": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/falcor-express": "^0.1.18",
+    "@types/ramda": "github:types/npm-ramda#dist",
+    "@types/query-string": "^6.1.1",
+    "@types/tape": "^4.2.32",
+    "query-string": "^6.2.0",
+    "tap-summary": "^4.0.0",
+    "tape": "^4.9.1",
+    "tsc-watch": "^1.0.31",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.2.1"
+  }
+}
