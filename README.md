@@ -14,3 +14,8 @@ npm run test
 ```bash
 npm run build
 ```
+
+## Dockerize
+```bash
+./dockerize.sh
+```

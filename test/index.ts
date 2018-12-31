@@ -1,2 +1,7 @@
-import './search-routes';
-import './resource-routes';
+import test from 'tape';
+
+
+test('TODO', (assert) => {
+  assert.plan(1);
+  assert.pass();
+});

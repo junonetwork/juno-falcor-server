@@ -1,0 +1,15 @@
+version: '2'
+services:
+  juno-client:
+    image: juno/client
+    depends_on:
+      - juno-server
+    ports:
+      - "80:80"
+
+  juno-server:
+    image: juno/falcor-server
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+    restart: always

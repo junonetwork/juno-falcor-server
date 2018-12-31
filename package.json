@@ -19,6 +19,7 @@
     "falcor-express": "^0.1.4",
     "juno-falcor-router": "github:junonetwork/juno-falcor-router#master",
     "ramda": "^0.26.1",
+    "rxjs": "^6.3.3",
     "sparqljs": "^2.1.0"
   },
   "devDependencies": {
